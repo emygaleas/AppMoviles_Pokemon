@@ -8,13 +8,26 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 })
 export class PokemonListPage implements OnInit {
   pokemons: any[] = [];
+  allPokemons: any[] = []; // 👈 copia original
   loading = false;
 
   constructor(private pokemonService: PokemonService) {}
 
   ngOnInit() {
     this.fetchPokemons();
-    
+  }
+
+  searchPokemon(event: any) {
+    const value = event.target.value.toLowerCase();
+
+    if (!value) {
+      this.pokemons = this.allPokemons; // restaurar lista
+      return;
+    }
+
+    this.pokemons = this.allPokemons.filter(pokemon =>
+      pokemon.name.toLowerCase().includes(value)
+    );
   }
 
   fetchPokemons() {
@@ -22,6 +35,7 @@ export class PokemonListPage implements OnInit {
     this.pokemonService.getPokemons(50).subscribe({
       next: (response) => {
         this.pokemons = response.results;
+        this.allPokemons = response.results; // 👈 guardar copia
         this.loading = false;
       },
       error: (error) => {

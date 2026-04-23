@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content>
+  <ion-searchbar placeholder="Buscar Pokémon" animated showCancelButton="always" cancelButtonText="Cancelar" (ionInput)="searchPokemon($event)" [debounce]="500" ></ion-searchbar>
   <ion-list>
     <ion-item *ngFor="let pokemon of pokemons">
       <ion-label>{{ pokemon.name | titlecase }}</ion-label>
