@@ -1,4 +1,4 @@
-# 📱 Pokédex App - Ionic Angular
+# 📱 Pokédex App - Ionic
 
 ## 👨‍💻 Elaborado por
 
@@ -131,7 +131,7 @@ Se muestra un mensaje cuando el Pokémon no existe.
 ## 📱 APLICACIÓN MÓVIL (ANDROID)
 
 🔗 A continuación, se proporciona el enlace para descargar el archivo APK e instalar la aplicación en un dispositivo Android:
-  - [Descargar aplicación Photo-Gallery](https://epnecuador-my.sharepoint.com/:u:/g/personal/emily_galeas_epn_edu_ec/IQCxyJam2mIwSLYceosvMKj8AYETqUXMM-EPE67pl9nPVGA?e=pa1RxF)
+  - [Descargar aplicación Photo-Gallery](https://epnecuador-my.sharepoint.com/:u:/g/personal/emily_galeas_epn_edu_ec/IQA7rDWNzBv3Q4a5YdmhrpPOAWbuxsmtMzCL0UDxfqtYWIo?e=d7HFmz)
 
 ## 📸 Capturas de pantalla
 
@@ -141,13 +141,13 @@ Se muestra un mensaje cuando el Pokémon no existe.
 
 ### 📹 Video Funcionalidad
 
-
+https://github.com/user-attachments/assets/38593697-02e8-4732-9310-b8d974af00bc
 
 ---
 
 ## ✅ Resultados obtenidos
 
-* Se logró implementar la navegación entre vistas con parámetros
-* Se consumió correctamente una API REST externa
+* Se logró implementar la navegación entre vistas con parámetros (Búsqueda y visualización de información en diferentes pantallas)
+* Se consumió correctamente una API externa
 * Se visualizaron los datos completos de un Pokémon
 ---
