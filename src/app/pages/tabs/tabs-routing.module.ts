@@ -13,7 +13,7 @@ const routes: Routes = [
         loadChildren: () => import('../pokemon-list/pokemon-list.module').then(m => m.PokemonListPageModule)
       },
       {
-        path: 'tab1',
+        path: 'tab1/:name',
         loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
       },
       {

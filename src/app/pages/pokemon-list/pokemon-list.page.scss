@@ -1,0 +1,69 @@
+ion-content {
+    /* Aplicamos el fondo directamente a ion-content */
+    --background: url('https://i.imgur.com/sfDvxEF.png') no-repeat center center / cover fixed;
+    
+    /* El color y el blend-mode para mantener tu estilo original */
+    background-color: rgba(134, 211, 221, 0.85);
+    background-blend-mode: multiply;
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+/* El resto de tus estilos se quedan igual */
+ion-card {
+    --background: transparent;
+    box-shadow: none;
+    margin: 0 0 20px 0;
+    border: none;
+    text-align: center;
+}
+
+ion-card-title {
+    background-color: #ef5350;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 3px solid #b71c1c;
+}
+
+.screen-line {
+    width: 60%;
+    height: 4px;
+    background: #ffffff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+ion-searchbar {
+    --background: rgba(255, 255, 255, 0.9);
+    --color: #000;
+    --placeholder-color: #555;
+    --border-radius: 20px;
+    --box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    padding: 5px;
+}
+
+ion-button {
+    --background: linear-gradient(145deg, #d32f2f, #ff5252);
+    --color: white;
+    --border-radius: 12px;
+    --box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+ion-button:active {
+    transform: scale(0.95);
+}

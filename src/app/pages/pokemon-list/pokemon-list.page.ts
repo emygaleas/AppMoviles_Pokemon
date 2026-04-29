@@ -1,47 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { PokemonService } from 'src/app/services/pokemon.service';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.page.html',
   styleUrls: ['./pokemon-list.page.scss'],
 })
-export class PokemonListPage implements OnInit {
-  pokemons: any[] = [];
-  allPokemons: any[] = []; // 👈 copia original
-  loading = false;
 
-  constructor(private pokemonService: PokemonService) {}
+export class PokemonListPage{
+  nombrePokemon: string = '';
+  constructor(private router: Router) {}
 
-  ngOnInit() {
-    this.fetchPokemons();
-  }
+  buscarPokemon() {
+    if (!this.nombrePokemon.trim()) return;
 
-  searchPokemon(event: any) {
-    const value = event.target.value.toLowerCase();
-
-    if (!value) {
-      this.pokemons = this.allPokemons; // restaurar lista
-      return;
-    }
-
-    this.pokemons = this.allPokemons.filter(pokemon =>
-      pokemon.name.toLowerCase().includes(value)
-    );
-  }
-
-  fetchPokemons() {
-    this.loading = true;
-    this.pokemonService.getPokemons(50).subscribe({
-      next: (response) => {
-        this.pokemons = response.results;
-        this.allPokemons = response.results; // 👈 guardar copia
-        this.loading = false;
-      },
-      error: (error) => {
-        console.error('Error fetching Pokémon:', error);
-        this.loading = false;
-      },
-    });
+    this.router.navigate(['/tab1', this.nombrePokemon.toLowerCase()]);
   }
 }
